@@ -111,17 +111,53 @@ nav a:hover {
     justify-content: center;
     flex-wrap: wrap;
 }
-.social-links a {
+
+.social-button {
     text-decoration: none;
     color: white;
-    background: linear-gradient(135deg, #0a6dd7, #0f9b8e);
     padding: 0.5rem 1rem;
     border-radius: 25px;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.4s ease, transform 0.2s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    min-width: 140px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
 }
-.social-links a:hover {
-    background: linear-gradient(135deg, #34e89e, #0f9b8e);
+
+/* GitHub */
+.github {
+    background: linear-gradient(135deg, #333, #555);
+}
+.github:hover {
+    background: linear-gradient(135deg, #555, #333);
+    transform: translateY(-2px);
+}
+
+/* LinkedIn */
+.linkedin {
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+.linkedin:hover {
+    background: linear-gradient(135deg, #00a0dc, #0077b5);
+    transform: translateY(-2px);
+}
+
+/* Instagram */
+.instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.instagram:hover {
+    background: linear-gradient(45deg, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+    transform: translateY(-2px);
+}
+
+/* Facebook */
+.facebook {
+    background: linear-gradient(135deg, #3b5998, #4c70ba);
+}
+.facebook:hover {
+    background: linear-gradient(135deg, #4c70ba, #3b5998);
     transform: translateY(-2px);
 }
 
@@ -151,3 +187,6 @@ footer {
     margin-top: 2rem;
     box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
 }
+
+
+
