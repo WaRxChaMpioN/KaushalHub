@@ -117,7 +117,7 @@ nav a:hover {
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 25px;
-    transition: background 0.4s ease, transform 0.2s ease;
+    transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     min-width: 140px;
     text-align: center;
@@ -127,20 +127,22 @@ nav a:hover {
 
 /* GitHub */
 .github {
-    background: linear-gradient(135deg, #333, #555);
+    background: linear-gradient(135deg, #333, #555, #444, #222);
 }
 .github:hover {
-    background: linear-gradient(135deg, #555, #333);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #555, #333, #444, #222);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* LinkedIn */
 .linkedin {
-    background: linear-gradient(135deg, #0077b5, #00a0dc);
+    background: linear-gradient(135deg, #0077b5, #00a0dc, #0093b8, #005f8d);
 }
 .linkedin:hover {
-    background: linear-gradient(135deg, #00a0dc, #0077b5);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #00a0dc, #0077b5, #005f8d, #0093b8);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* Instagram */
@@ -149,16 +151,18 @@ nav a:hover {
 }
 .instagram:hover {
     background: linear-gradient(45deg, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* Facebook */
 .facebook {
-    background: linear-gradient(135deg, #3b5998, #4c70ba);
+    background: linear-gradient(135deg, #3b5998, #4c70ba, #355089, #2e4470);
 }
 .facebook:hover {
-    background: linear-gradient(135deg, #4c70ba, #3b5998);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #4c70ba, #3b5998, #2e4470, #355089);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* === Buttons === */
