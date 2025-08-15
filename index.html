@@ -2,14 +2,13 @@
 <html>
 <head>
     <title>Kaushal's Hub</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         /* Base styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background: linear-gradient(135deg, #0f9b8e, #0a6dd7);
+            color: #fff;
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -18,13 +17,23 @@
             to { opacity: 1; }
         }
 
-        /* Header with gradient */
+        /* Header with moving gradient */
         header {
-            background: linear-gradient(135deg, #222, #444);
+            background: linear-gradient(135deg, #0a6dd7, #0f9b8e);
+            background-size: 200% 200%;
+            animation: gradientMove 8s ease infinite;
             color: white;
             padding: 2rem 0;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         header h1 {
             margin: 0;
             font-size: 2.5rem;
@@ -34,11 +43,12 @@
             opacity: 0.85;
         }
 
-        /* Navigation with underline animation */
+        /* Navigation with gradient hover underline */
         nav {
-            background: #333;
+            background: rgba(0,0,0,0.3);
             display: flex;
             justify-content: center;
+            backdrop-filter: blur(5px);
         }
         nav a {
             color: white;
@@ -53,16 +63,17 @@
             bottom: 0;
             left: 50%;
             width: 0;
-            height: 2px;
-            background: #ff9800;
+            height: 3px;
+            background: linear-gradient(135deg, #34e89e, #0f9b8e);
             transition: all 0.3s ease;
             transform: translateX(-50%);
+            border-radius: 2px;
         }
         nav a:hover::after {
             width: 80%;
         }
         nav a:hover {
-            color: #ff9800;
+            color: #34e89e;
         }
 
         /* Main container */
@@ -72,27 +83,29 @@
             margin: auto;
         }
 
-        /* Card hover lift */
+        /* Card hover lift with gradient background */
         .card {
-            background: white;
+            background: linear-gradient(145deg, #1cb5e0, #000851);
+            color: white;
             margin-bottom: 1rem;
             padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
         }
 
         /* About section */
         .about {
-            background: white;
+            background: linear-gradient(145deg, #0f9b8e, #34e89e);
+            color: white;
             padding: 1.5rem;
             margin-top: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         /* Social buttons */
@@ -106,40 +119,42 @@
         .social-links a {
             text-decoration: none;
             color: white;
-            background: #333;
+            background: linear-gradient(135deg, #0a6dd7, #0f9b8e);
             padding: 0.5rem 1rem;
-            border-radius: 5px;
+            border-radius: 25px;
             transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         .social-links a:hover {
-            background: #555;
+            background: linear-gradient(135deg, #34e89e, #0f9b8e);
             transform: translateY(-2px);
         }
 
         /* Resume buttons */
         .btn {
-            background-color: #0073b1;
+            background: linear-gradient(135deg, #34e89e, #0f9b8e);
             color: white;
             padding: 10px 18px;
             margin: 5px;
-            border-radius: 5px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: background 0.3s, transform 0.3s;
         }
         .btn:hover {
-            background-color: #005580;
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, #0f9b8e, #34e89e);
+            transform: scale(1.05);
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 1rem;
-            background: #222;
+            background: linear-gradient(135deg, #0a6dd7, #0f9b8e);
             color: white;
             margin-top: 2rem;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -167,19 +182,17 @@
     <div class="card">
         <h4>🔥 Combustion & CFD</h4>
         <p>Deep dive into simulations, radiation models, and references to top books.</p>
-        <a href="cfd/index.html">Explore CFD</a>
+        <a href="cfd/index.html" class="btn">Explore CFD</a>
     </div>
     <div class="card">
         <h4>💻 Tech Reviews</h4>
         <p>Hands-on impressions of phones, laptops, and gadgets.</p>
-        <a href="tech/index.html">Read Reviews</a>
+        <a href="tech/index.html" class="btn">Read Reviews</a>
     </div>
 
     <div class="about">
         <h2>About Me</h2>
-        <p>As a Research Scholar at the Indian Institute of Technology, Mandi, I focus on computational mechanics, leveraging simulation tools like <b>OpenFOAM</b> to develop radiation heat transfer models. My work involves solving the complex <b>Radiation Transport Equation (RTE)</b> and optimizing computational efficiency through advanced coding practices in C++. This role allows me to contribute to innovative thermal and fluid dynamics research while enhancing my technical expertise.</p>
-
-        <p>Pursuing an <b>M.Tech (R) in Computational Mechanics</b>, I combine academic rigor with hands-on problem-solving to tackle challenges in numerical modeling and simulation. My commitment to continuous learning is reflected in certifications like <b>Computational Fluid Dynamics on an Unstructured Mesh</b> from IIT Kharagpur, which complement my core skills in CFD, design engineering, and fluid mechanics. My goal is to advance the boundaries of computational research while fostering impactful contributions to the field.</p>
+        <p>As a Research Scholar at the Indian Institute of Technology, Mandi, I focus on computational mechanics, leveraging simulation tools like <b>OpenFOAM</b> to develop radiation heat transfer models...</p>
     </div>
 
     <div class="social-links">
